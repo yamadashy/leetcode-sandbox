@@ -1,3 +1,3 @@
 LeetCodeの回答など
 
-https://leetcode.com/problems
+https://leetcode.com/problemset/all/
