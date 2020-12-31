@@ -11,17 +11,17 @@
  */
 
 class ListNode {
-  val: number
-  next: ListNode | null
+  val: number;
+  next: ListNode | null;
 
   constructor(val?: number, next?: ListNode | null) {
-    this.val = (val === undefined ? 0 : val)
-    this.next = (next === undefined ? null : next)
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
   }
 }
 
 function isPalindrome(head: ListNode | null): boolean {
-  let numbers = [];
+  const numbers = [];
   let current = head;
 
   while (current !== null) {
@@ -33,10 +33,10 @@ function isPalindrome(head: ListNode | null): boolean {
   const numbersHalfLength = Math.floor(numbersLength / 2);
 
   for (let i = 0; i < numbersLength; i++) {
-    if (numbers[i] !== numbers[numbersLength -1 - i]) {
+    if (numbers[i] !== numbers[numbersLength - 1 - i]) {
       return false;
     }
   }
 
   return true;
-};
+}
