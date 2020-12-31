@@ -21,7 +21,7 @@ if (problemId === null) {
   throw new Error('Problem id is empty');
 }
 
-axios.get('https://leetcode.com/api/problems/algorithms/').then((response) => {
+axios.get('https://leetcode.com/api/problems/all/').then((response) => {
   const algorithms = response.data;
   const statStatusPairs: StatStatusPair[] = algorithms.stat_status_pairs;
 
@@ -38,6 +38,8 @@ axios.get('https://leetcode.com/api/problems/algorithms/').then((response) => {
   if (targetStatStatusPair === null) {
     throw new Error(`Not found problem. id: ${problemId}`);
   }
+
+  // TODO: Get problem code snippet with selenium
 
   // Create TS file
   const tsFileNameProblemId = ('000' + problemId).slice(-4);
