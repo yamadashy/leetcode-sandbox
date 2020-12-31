@@ -5,3 +5,5 @@ function reverse(x: number): number {
 
   return -Math.pow(2, 31) <= reversedNum && reversedNum <= Math.pow(2, 31) - 1 ? reversedNum : 0;
 }
+
+export {};
