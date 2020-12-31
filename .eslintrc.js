@@ -1,4 +1,6 @@
-'use strict';
+"use strict";
+
+/* global module */
 
 module.exports = {
   root: true,
@@ -7,26 +9,19 @@ module.exports = {
     es2020: true,
   },
   extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-    'prettier/@typescript-eslint',
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
   ],
-  plugins: [
-    '@typescript-eslint',
-    'prettier',
-  ],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    'sourceType': 'module',
-    'project': './tsconfig.json'
-  },
+  plugins: ["@typescript-eslint", "prettier"],
+  parser: "@typescript-eslint/parser",
   rules: {
-    'prettier/prettier': 'warn',
+    "prettier/prettier": "warn",
 
     // disable
-    'no-console': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
+    "no-console": "off",
+    "@typescript-eslint/no-unused-vars": "off",
   },
-}
+};
