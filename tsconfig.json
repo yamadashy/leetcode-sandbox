@@ -9,8 +9,13 @@
     ],
     "allowJs": false,
     "noImplicitAny": true,
-    "removeComments": true,
-    "sourceMap": true,
     "noEmit": true
-  }
+  },
+  "include": [
+    "solutions",
+    "scripts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

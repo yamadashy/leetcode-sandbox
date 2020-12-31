@@ -8,7 +8,8 @@
     "try-problem": "ts-node ./scripts/try-problem.ts",
     "lint": "eslint . --ext .ts",
     "lint:fix": "yarn lint --fix",
-    "preinstall": "typesync || :"
+    "preinstall": "typesync || :",
+    "type-check": "tsc "
   },
   "dependencies": {},
   "devDependencies": {
