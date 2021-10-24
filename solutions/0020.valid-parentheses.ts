@@ -41,5 +41,3 @@ function isValid(text: string): boolean {
 
   return true;
 }
-
-export {};

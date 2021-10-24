@@ -22,5 +22,3 @@ function strStr(haystack: string, needle: string): number {
 
   return searchIndex;
 }
-
-export {};

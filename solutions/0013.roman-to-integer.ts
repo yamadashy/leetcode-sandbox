@@ -41,5 +41,3 @@ function romanToInt(romanNumberText: string): number {
 
   return sum;
 }
-
-export {};

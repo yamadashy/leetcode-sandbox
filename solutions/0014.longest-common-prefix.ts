@@ -29,5 +29,3 @@ function longestCommonPrefix(strs: string[]): string {
 
   return firstStr.slice(0, sameCount);
 }
-
-export {};
