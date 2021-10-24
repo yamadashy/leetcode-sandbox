@@ -48,7 +48,7 @@ axios.get('https://leetcode.com/api/problems/all/').then((response) => {
   const tsFilePath = path.resolve(__dirname, '../solutions/', tsFileName);
   const isFileExist = fs.existsSync(tsFilePath);
 
-  const tsFileTemplate = `\nexport {};\n`;
+  const tsFileTemplate = `\n`;
 
   if (!isFileExist) {
     fs.writeFile(tsFilePath, tsFileTemplate, (err) => {
