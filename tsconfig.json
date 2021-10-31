@@ -10,7 +10,10 @@
     ],
     "allowJs": false,
     "noImplicitAny": true,
-    "noEmit": true
+    "noEmit": true,
+    "typeRoots": [
+      "solutions/types"
+    ]
   },
   "include": [
     "solutions",
