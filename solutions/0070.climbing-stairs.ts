@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/climbing-stairs
-const resultMap = [];
+const resultMap: number[] = [];
 
 function climbStairs(n: number): number {
   return re(n);
