@@ -3,17 +3,15 @@
 function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
   const numsP: number[] = [];
   const numsQ: number[] = [];
-  inorderTraversalLoop(numsP, p);
-  inorderTraversalLoop(numsQ, q);
+  preorderTraversalLoop(numsP, p);
+  preorderTraversalLoop(numsQ, q);
   return JSON.stringify(p) === JSON.stringify(q);
 }
 
-function inorderTraversalLoop(nums: number[], node: TreeNode | null) {
+function preorderTraversalLoop(nums: number[], node: TreeNode | null) {
   if (node !== null) {
-    inorderTraversalLoop(nums, node.left);
+    preorderTraversalLoop(nums, node.left);
+    preorderTraversalLoop(nums, node.right);
     nums.push(node.val);
-    inorderTraversalLoop(nums, node.right);
-  } else {
-    nums.push(null);
   }
 }
