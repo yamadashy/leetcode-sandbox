@@ -3,7 +3,7 @@ const resultMap: number[] = [];
 
 function climbStairs(n: number): number {
   return re(n);
-};
+}
 
 function re(n: number): number {
   if (n <= 2) {

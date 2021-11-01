@@ -22,5 +22,6 @@ module.exports = {
     // disable
     'no-console': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
+    'no-constant-condition': 'off',
   },
 };

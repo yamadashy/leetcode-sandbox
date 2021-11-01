@@ -4,11 +4,11 @@ function addBinary(a: string, b: string): string {
   const bLen = b.length;
   const maxLen = Math.max(aLen, bLen);
   let carryVal = 0;
-  let resultArray = [];
+  const resultArray = [];
 
   for (let i = 0; i < maxLen; i++) {
-    let aIndex = aLen - 1 - i;
-    let bIndex = bLen - 1 - i;
+    const aIndex = aLen - 1 - i;
+    const bIndex = bLen - 1 - i;
     let aVal = 0;
     let bVal = 0;
     let sumVal = 0;
@@ -39,4 +39,4 @@ function addBinary(a: string, b: string): string {
   }
 
   return resultArray.join('');
-};
+}

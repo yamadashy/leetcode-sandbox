@@ -29,7 +29,7 @@ if (problemId === null) {
 
 class LeetCodeApi {
   static fetchProblemsAll() {
-    return axios.get('https://leetcode.com/api/problems/all/')
+    return axios.get('https://leetcode.com/api/problems/all/');
   }
 
   static fetchProblem(titleSlag: string) {
