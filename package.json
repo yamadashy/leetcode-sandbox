@@ -5,7 +5,7 @@
   "author": "Kazuki Yamada <koukun0120@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "try-problem": "ts-node ./scripts/try-problem.ts",
+    "try": "ts-node ./scripts/try-problem.ts",
     "lint": "eslint . --ext .ts",
     "lint:fix": "yarn lint --fix",
     "preinstall": "typesync || :",
