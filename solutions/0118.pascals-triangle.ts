@@ -3,10 +3,6 @@ function generate(numRows: number): number[][] {
   const numsArray: number[][] = [[1]];
   let nums: number[] = [1];
 
-  if (numRows === 1) {
-    return [[1]];
-  }
-
   for (let i = 1; i < numRows; i++) {
     const numsLength = nums.length;
     const nextNums: number[] = [1];
