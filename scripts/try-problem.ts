@@ -82,7 +82,7 @@ LeetCodeApi.fetchProblemsAll().then((response) => {
 
   LeetCodeApi.fetchProblem(questionTitleSlag).then((res) => {
     const codeSnippets: CodeSnippet[] = res.data.data.question.codeSnippets;
-    const snippetForTypeScript = codeSnippets[14].code;
+    const snippetForTypeScript = codeSnippets.find((codeSnippet) => codeSnippet.lang === 'TypeScript').code;
     const tsFileTemplate = `// https://leetcode.com/problems/${questionTitleSlag}\n${snippetForTypeScript}\n`;
 
     if (!isFileExist) {
