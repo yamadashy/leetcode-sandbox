@@ -12,25 +12,25 @@
  */
 
 function deleteDuplicates(head: ListNode | null): ListNode | null {
-  let currentNode = head;
+    let currentNode = head;
 
-  if (currentNode === null) {
+    if (currentNode === null) {
+        return head;
+    }
+
+    while (true) {
+        if (currentNode.next === null) {
+            break;
+        }
+
+        const nextNode = currentNode.next;
+
+        if (currentNode.val === nextNode.val) {
+            currentNode.next = nextNode.next;
+        } else {
+            currentNode = nextNode;
+        }
+    }
+
     return head;
-  }
-
-  while (true) {
-    if (currentNode.next === null) {
-      break;
-    }
-
-    const nextNode = currentNode.next;
-
-    if (currentNode.val === nextNode.val) {
-      currentNode.next = nextNode.next;
-    } else {
-      currentNode = nextNode;
-    }
-  }
-
-  return head;
 }

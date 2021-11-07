@@ -2,21 +2,21 @@
 const resultMap: number[] = [];
 
 function climbStairs(n: number): number {
-  return re(n);
+    return re(n);
 }
 
 function re(n: number): number {
-  if (n <= 2) {
-    return n;
-  }
+    if (n <= 2) {
+        return n;
+    }
 
-  if (resultMap[n]) {
-    return resultMap[n];
-  }
+    if (resultMap[n]) {
+        return resultMap[n];
+    }
 
-  const result = re(n - 2) + re(n - 1);
+    const result = re(n - 2) + re(n - 1);
 
-  resultMap[n] = result;
+    resultMap[n] = result;
 
-  return result;
+    return result;
 }

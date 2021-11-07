@@ -14,22 +14,21 @@
  */
 
 function postorderTraversal(root: TreeNode | null): number[] {
-  const numList: number[] = [];
+    const numList: number[] = [];
 
-  postorderTraversalLoop(root, numList);
+    postorderTraversalLoop(root, numList);
 
-  return numList;
-};
+    return numList;
+}
 
+function postorderTraversalLoop(node: TreeNode | null, numList: number[]): void {
+    if (node === null) {
+        return;
+    }
 
-function postorderTraversalLoop(node: TreeNode | null, numList: number[]): void{
-  if (node === null) {
-    return;
-  }
-
-  postorderTraversalLoop(node.left, numList);
-  postorderTraversalLoop(node.right, numList);
-  numList.push(node.val);
+    postorderTraversalLoop(node.left, numList);
+    postorderTraversalLoop(node.right, numList);
+    numList.push(node.val);
 }
 
 export {};

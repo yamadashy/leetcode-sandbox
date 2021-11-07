@@ -12,24 +12,24 @@
  */
 
 function hasCycle(head: ListNode | null): boolean {
-  let current = head;
-  let hasCycle = false;
-  const valMap: Map<ListNode, boolean> = new Map();
+    let current = head;
+    let hasCycle = false;
+    const valMap: Map<ListNode, boolean> = new Map();
 
-  while (true) {
-    if (current === null) {
-      break;
+    while (true) {
+        if (current === null) {
+            break;
+        }
+
+        if (valMap.has(current)) {
+            hasCycle = true;
+            break;
+        }
+
+        valMap.set(current, true);
+
+        current = current.next;
     }
 
-    if (valMap.has(current)) {
-      hasCycle = true;
-      break;
-    }
-
-    valMap.set(current, true);
-
-    current = current.next;
-  }
-
-  return hasCycle;
-};
+    return hasCycle;
+}

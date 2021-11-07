@@ -11,17 +11,17 @@
  */
 
 function reverseList(head: ListNode | null): ListNode | null {
-  let currentNode = head;
-  let newCurrentNode = null;
+    let currentNode = head;
+    let newCurrentNode = null;
 
-  while (currentNode !== null) {
-    const newCurrentNodePrev = new ListNode();
-    newCurrentNodePrev.val = currentNode.val;
-    newCurrentNodePrev.next = newCurrentNode;
-    newCurrentNode = newCurrentNodePrev;
+    while (currentNode !== null) {
+        const newCurrentNodePrev = new ListNode();
+        newCurrentNodePrev.val = currentNode.val;
+        newCurrentNodePrev.next = newCurrentNode;
+        newCurrentNode = newCurrentNodePrev;
 
-    currentNode = currentNode.next;
-  }
+        currentNode = currentNode.next;
+    }
 
-  return newCurrentNode;
+    return newCurrentNode;
 }
