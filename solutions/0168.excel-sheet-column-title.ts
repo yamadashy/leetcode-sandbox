@@ -5,6 +5,8 @@ function convertToTitle(columnNumber: number): string {
 
     while (true) {
         const mod = columnNumber % 26;
+        columnNumber = (columnNumber - mod) / 26;
+
         let charCode = charCodeA + mod - 1;
 
         if (mod === 0) {
@@ -13,7 +15,6 @@ function convertToTitle(columnNumber: number): string {
         }
 
         title = String.fromCharCode(charCode) + title;
-        columnNumber = (columnNumber - mod) / 26;
 
         if (columnNumber === 0) {
             break;
