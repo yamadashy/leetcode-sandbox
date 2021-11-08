@@ -15,3 +15,5 @@ function preorderTraversalLoop(nums: number[], node: TreeNode | null) {
         nums.push(node.val);
     }
 }
+
+export {};

@@ -15,3 +15,5 @@ function removeDuplicates(nums: number[]): number {
 
     return nums.length;
 }
+
+export {};

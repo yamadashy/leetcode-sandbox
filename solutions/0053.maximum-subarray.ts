@@ -14,3 +14,5 @@ function maxSubArray(nums: number[]): number {
 
     return maxSum;
 }
+
+export {};

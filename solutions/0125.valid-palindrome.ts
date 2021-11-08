@@ -21,3 +21,5 @@ function isPalindrome(s: string): boolean {
 
     return isPalindrome;
 }
+
+export {};

@@ -22,3 +22,5 @@ function sumLoop(node: TreeNode | null, sum: number, leafSumList: number[]) {
     sumLoop(node.left, sum, leafSumList);
     sumLoop(node.right, sum, leafSumList);
 }
+
+export {};

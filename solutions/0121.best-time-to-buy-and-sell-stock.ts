@@ -18,3 +18,5 @@ function maxProfit(prices: number[]): number {
 
     return maxDiff;
 }
+
+export {};

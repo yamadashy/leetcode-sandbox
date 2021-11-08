@@ -19,3 +19,5 @@ function generate(numRows: number): number[][] {
 
     return numsArray;
 }
+
+export {};

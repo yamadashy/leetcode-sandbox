@@ -26,3 +26,5 @@ function depthLoop(node: TreeNode | null, depth: number, leafDepthList: number[]
     depthLoop(node.left, depth, leafDepthList);
     depthLoop(node.right, depth, leafDepthList);
 }
+
+export {};

@@ -10,3 +10,5 @@ function searchInsert(nums: number[], target: number): number {
 
     return nums.length;
 }
+
+export {};

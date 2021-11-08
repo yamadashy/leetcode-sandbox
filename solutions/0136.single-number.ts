@@ -12,3 +12,5 @@ function singleNumber(nums: number[]): number {
 
     return parseInt(Object.keys(numAppearMap)[0]);
 }
+
+export {};

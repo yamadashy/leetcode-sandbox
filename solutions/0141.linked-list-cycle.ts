@@ -33,3 +33,5 @@ function hasCycle(head: ListNode | null): boolean {
 
     return hasCycle;
 }
+
+export {};

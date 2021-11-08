@@ -20,3 +20,5 @@ function re(n: number): number {
 
     return result;
 }
+
+export {};

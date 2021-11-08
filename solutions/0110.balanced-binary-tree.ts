@@ -21,3 +21,5 @@ function maxDepthLoop(node: TreeNode | null, depth: number): [number, boolean] {
 
     return [Math.max(leftDepth, rightDepth) + 1, isLeftBalanced && isRightBalanced && isBalanced];
 }
+
+export {};

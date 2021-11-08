@@ -11,3 +11,5 @@ function maxDepthLoop(node: TreeNode | null, depth: number): number {
 
     return Math.max(maxDepthLoop(node.left, depth), maxDepthLoop(node.right, depth)) + 1;
 }
+
+export {};

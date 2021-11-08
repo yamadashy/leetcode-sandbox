@@ -40,3 +40,5 @@ function addBinary(a: string, b: string): string {
 
     return resultArray.join('');
 }
+
+export {};
