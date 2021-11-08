@@ -14,30 +14,30 @@
 function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): ListNode | null {
     let currentA: ListNode = headA;
     let currentB: ListNode = headB;
+    const nodeMap = new Map<ListNode, boolean>();
 
-    while (true) {
-        if (currentA === null) {
-            break;
-        }
-
-        currentB = headB;
-
-        while (true) {
-            if (currentB === null) {
-                break;
-            }
-
-            if (currentA === currentB) {
+    while (currentA !== null || currentB !== null) {
+        if (currentA !== null) {
+            if (nodeMap.has(currentA)) {
                 return currentA;
             }
 
+            nodeMap.set(currentA, true);
+            currentA = currentA.next;
+        }
+
+        if (currentB !== null) {
+            if (nodeMap.has(currentB)) {
+                return currentB;
+            }
+
+            nodeMap.set(currentB, true);
             currentB = currentB.next;
         }
 
-        currentA = currentA.next;
     }
 
-    return currentA;
+    return null;
 };
 
 export {};
