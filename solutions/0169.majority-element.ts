@@ -21,6 +21,6 @@ function majorityElement(nums: number[]): number {
     }
 
     return maxIndex;
-};
+}
 
 export {};

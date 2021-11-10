@@ -20,6 +20,6 @@ function majorityElement(nums: number[]): number[] {
     }
 
     return indexes;
-};
+}
 
 export {};

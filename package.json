@@ -26,5 +26,14 @@
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3",
     "typesync": "^0.8.0"
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 120,
+    "bracketSpacing": true,
+    "trailingComma": "all",
+    "quoteProps": "consistent"
   }
 }
