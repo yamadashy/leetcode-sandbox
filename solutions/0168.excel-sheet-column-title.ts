@@ -22,6 +22,6 @@ function convertToTitle(columnNumber: number): string {
     }
 
     return title;
-}
+};
 
 export {};

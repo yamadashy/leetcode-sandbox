@@ -21,6 +21,6 @@ function twoSum(numbers: number[], target: number): number[] {
     }
 
     return [resultI + 1, resultJ + 1];
-}
+};
 
 export {};
