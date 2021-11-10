@@ -34,10 +34,9 @@ function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): Li
             nodeMap.set(currentB, true);
             currentB = currentB.next;
         }
-
     }
 
     return null;
-};
+}
 
 export {};
