@@ -34,13 +34,8 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
         const sumVal = l1Val + l2Val + carryValue;
         currentNode.val = sumVal % 10;
 
-        if (currentL1) {
-            currentL1 = currentL1.next;
-        }
-
-        if (currentL2) {
-            currentL2 = currentL2.next;
-        }
+        currentL1 = currentL1 && currentL1.next;
+        currentL2 = currentL2 && currentL2.next;
 
         if (currentL1 || currentL2) {
             currentNode = currentNode.next = new ListNode(null);
