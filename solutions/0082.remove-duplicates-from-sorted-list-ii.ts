@@ -11,7 +11,6 @@
  * }
  */
 
-// TODO: もっといい感じに
 function deleteDuplicates(head: ListNode | null): ListNode | null {
     let currentNode = head;
     let currentNode2: ListNode = null;
