@@ -10,8 +10,8 @@ class KthLargest {
 
     add(val: number): number {
         this.sortedNums.push(val);
-        // this.sortedNums.sort(sortFunction);
         this.insertToSortedNums(val);
+        this.sortedNums.length = this.k;
         return this.sortedNums[this.k - 1];
     }
 
@@ -21,13 +21,11 @@ class KthLargest {
         for (let i = 0; i < arrayLength; i++) {
             if (this.sortedNums[i] <= val) {
                 this.sortedNums.splice(i, 0, val);
-                this.sortedNums.length = this.k;
                 return;
             }
         }
 
         this.sortedNums.push(val);
-        this.sortedNums.length = this.k;
     }
 }
 
