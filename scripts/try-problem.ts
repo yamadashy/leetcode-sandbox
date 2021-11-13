@@ -2,9 +2,15 @@ import axios from 'axios';
 import * as fs from 'fs';
 import * as path from 'path';
 
+interface ApiProblemsResponse {
+    data: {
+        stat_status_pairs: StatStatusPair[];
+    };
+}
 interface StatStatusPair {
     stat: {
         question_id: number;
+        frontend_question_id: number;
         question__title: string;
         question__title_slug: string;
     };
@@ -28,7 +34,7 @@ if (problemId === null) {
 }
 
 class LeetCodeApi {
-    static fetchProblemsAll() {
+    static fetchProblemsAll(): Promise<ApiProblemsResponse> {
         return axios.get('https://leetcode.com/api/problems/all/');
     }
 
@@ -57,13 +63,13 @@ class LeetCodeApi {
 
 LeetCodeApi.fetchProblemsAll().then((response) => {
     const algorithms = response.data;
-    const statStatusPairs: StatStatusPair[] = algorithms.stat_status_pairs;
+    const statStatusPairs = algorithms.stat_status_pairs;
 
     let targetStatStatusPair: StatStatusPair | null = null;
 
     // Search
     for (const statStatusPair of statStatusPairs) {
-        if (statStatusPair.stat.question_id === problemId) {
+        if (statStatusPair.stat.frontend_question_id === problemId) {
             targetStatStatusPair = statStatusPair;
         }
     }
