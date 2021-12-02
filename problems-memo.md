@@ -6,3 +6,6 @@
 
 ## 215. Kth Largest Element in an Array
 ちゃんとアルゴリズム書く
+
+## 373. find-k-pairs-with-smallest-sums_
+もっと早く
